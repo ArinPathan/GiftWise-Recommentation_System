@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Giftwise</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- Main Heading -->
+
+        <div class="page-heading">
+            <h1>The Perfect <span>Gift</span>, For every person.</h1>
+        </div>
+
+        <div class="login-content">
+
+            <!-- Left Section -->
+
+            <div class="welcome-section">
+                <p>
+                    Welcome to Giftwise, your ultimate destination
+                    for finding the perfect gifts for every occasion.
+                </p>
+            </div>
+
+            <!-- Right Section -->
+
+            <div class="login-section">
+
+                <form id="loginForm" novalidate>
+
+                    <!-- Email or Username -->
+
+                    <div class="form-group">
+
+                        <label for="identity">Email/Username</label>
+
+                        <input type="text" id="identity"
+                               name="identity">
+
+                        <span class="error" id="identityError"></span>
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="password">Password</label>
+
+                        <input type="password" id="password"
+                               name="password">
+
+                        <span class="error" id="passwordError"></span>
+
+                    </div>
+
+                    <!-- Remember Me and Forgot Password -->
+
+                    <div class="login-options">
+
+                        <label class="remember-label">
+
+                            <input type="checkbox" id="rememberMe">
+
+                            Remember me
+
+                        </label>
+
+                        <a href="forgot-password.html" class="forgot-link">
+                            Forget Password?
+                        </a>
+
+                    </div>
+
+                    <!-- Login Button -->
+
+                    <button type="submit" class="login-button">
+                        Login
+                    </button>
+
+                    <!-- Sign Up Link -->
+
+                    <p class="signup-text">
+                        Don't have an account?
+                        <a href="register.html">Sign Up</a>
+                    </p>
+
+                    <p id="result"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
