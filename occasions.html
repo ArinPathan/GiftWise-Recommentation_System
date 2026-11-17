@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Occasions | Giftwise</title>
+
+    <link rel="stylesheet" href="occasions.css">
+</head>
+<body>
+    <button id="menuBtn" class="menu-button moved"
+            aria-label="Toggle menu">
+        &#9776;
+    </button>
+    <div class="sidebar active" id="sidebar">
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="customers.html">View customer details</a>
+        <a href="gift-database.html">Manage gift database</a>
+        <a href="categories.html">Manage categories</a>
+        <a href="occasions.html" class="active-link">
+            Manage occasions
+        </a>
+        <a href="customer-interests.html">
+            Manage customer interests
+        </a>
+        <a href="reviews.html">
+            Manage customer rates &amp; reviews
+        </a>
+        <a href="curators.html">Manage gift curators</a>
+        <a href="login.html" class="logout-link">Logout</a>
+    </div>
+    <div class="main-content shifted" id="mainContent">
+        <div class="page-header">
+            <h2>Occasions</h2>
+            <a href="admin-dashboard.html#profile">
+                <img src="admin-profile.png"
+                     class="profile-icon"
+                     alt="Admin Profile">
+            </a>
+        </div>
+        <div class="search-section">
+            <input type="text" id="search"
+                   placeholder="Search">
+            <button id="mainEditBtn" class="editBtn">
+                Edit
+            </button>
+        </div>
+        <div class="occasions-container" id="occasionsList">
+            <div class="occasion">
+                <h3 class="occasion-name">Graduation</h3>
+                <img src="graduation.jpeg"
+                     class="occasion-image"
+                     alt="Graduation">
+            </div>
+            <div class="occasion">
+                <h3 class="occasion-name">Birthday</h3>
+                <img src="birthday.jpeg"
+                     class="occasion-image"
+                     alt="Birthday">
+            </div>
+            <div class="occasion">
+                <h3 class="occasion-name">Bridal Shower</h3>
+                <img src="bridal-shower.jpeg"
+                     class="occasion-image"
+                     alt="Bridal Shower">
+            </div>
+            <div class="occasion">
+                <h3 class="occasion-name">Eid</h3>
+                <img src="eid.jpeg"
+                     class="occasion-image"
+                     alt="Eid">
+            </div>
+        </div>
+        <p id="searchMessage"></p>
+    </div>
+    <div id="editMenu" class="edit-menu hidden">
+        <h3>Edit Occasion</h3>
+        <label for="occasionSelect">Select Occasion</label>
+        <select id="occasionSelect">
+            <option value="">Select Occasion</option>
+        </select>
+        <button id="deleteBtn">Delete</button>
+        <button id="updateBtn">Update</button>
+        <button id="addBtn">Add</button>
+        <button id="renameBtn">Rename</button>
+        <button id="closeBtn">Cancel</button>
+    </div>
+    <input type="file" id="imageInput"
+           accept="image/*" class="hidden">
+    <script src="occasions.js"></script>
+</body>
+</html>
