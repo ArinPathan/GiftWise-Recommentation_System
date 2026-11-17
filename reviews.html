@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Rates &amp; Reviews | Giftwise</title>
+
+    <link rel="stylesheet" href="reviews.css">
+</head>
+
+<body>
+    <button id="menuBtn" class="menu-button moved"
+            aria-label="Toggle menu">
+        &#9776;
+    </button>
+    <div class="sidebar active" id="sidebar">
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="customers.html">View customer details</a>
+        <a href="gift-database.html">Manage gift database</a>
+        <a href="categories.html">Manage categories</a>
+        <a href="occasions.html">Manage occasions</a>
+        <a href="customer-interests.html">
+            Manage customer interests
+        </a>
+        <a href="reviews.html" class="active-link">
+            Manage customer rates &amp; reviews
+        </a>
+        <a href="curators.html">Manage gift curators</a>
+        <a href="login.html" class="logout-link">Logout</a>
+    </div>
+    <div class="main-content shifted" id="mainContent">
+        <div class="page-header">
+            <h2>Customer Rates &amp; Reviews</h2>
+            <a href="admin-dashboard.html#profile">
+                <img src="admin-profile.png"
+                     class="profile-icon"
+                     alt="Admin Profile">
+            </a>
+        </div>
+        <div class="filter-section">
+            <select id="sortReviews" aria-label="Filter reviews">
+                <option value="recent">
+                    Most Recent
+                </option>
+                <option value="highest">
+                    Highest Rating
+                </option>
+                <option value="lowest">
+                    Lowest Rating
+                </option>
+            </select>
+        </div>
+        <div class="reviews-container" id="reviewsList">
+        </div>
+        <p id="reviewCount"></p>
+    </div>
+    <div id="viewMenu" class="popup-menu hidden">
+        <h2>Customer Review</h2>
+        <img id="viewImage"
+             class="view-image"
+             alt="Customer Profile">
+        <h3 id="viewName"></h3>
+        <p id="viewRating" class="rating"></p>
+        <p id="ratingNumber"></p>
+        <div class="full-review">
+            <h4>Review</h4>
+            <p id="viewReview"></p>
+        </div>
+        <button id="closeViewBtn" class="close-button">
+            Close
+        </button>
+    </div>
+    <script src="reviews.js"></script>
+</body>
+</html>
