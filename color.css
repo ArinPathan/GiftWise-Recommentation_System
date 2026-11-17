@@ -1,0 +1,242 @@
+/* Global Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    font-family: Georgia, serif;
+
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.72),
+        rgba(0, 0, 0, 0.78)
+    ), url("backgift.jpeg");
+
+    background-color: #100d09;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Main Layout */
+
+.register-container {
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 70px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+/* Left Section */
+
+.welcome-section {
+    width: 50%;
+    padding-left: 10%;
+}
+
+.welcome-section h1 {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.35;
+}
+
+.welcome-section h1 span {
+    color: #96351f;
+}
+
+.welcome-section p {
+    font-size: 14px;
+    margin-top: 2px;
+    padding-left: 5px;
+}
+
+
+/* Right Section */
+
+.form-section {
+    width: 40%;
+    max-width: 420px;
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+
+/* Input Fields */
+
+.form-group input {
+    width: 100%;
+    height: 34px;
+    padding: 6px 9px;
+
+    background-color: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+.form-group input::placeholder {
+    color: #b5b0ad;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #96351f;
+}
+
+
+/* Password Show and Hide */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px;
+}
+
+.eye-button {
+    position: absolute;
+    right: 8px;
+    top: 7px;
+
+    background-color: transparent;
+    border: none;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* Radio Buttons and Checkbox */
+
+.options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.options label {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.options input {
+    width: 14px;
+    height: 14px;
+    accent-color: #96351f;
+    cursor: pointer;
+}
+
+
+/* Register Button */
+
+.register-button {
+    width: 100%;
+    padding: 8px;
+
+    background-color: #96351f;
+    color: white;
+    border: none;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background-color: #b3472c;
+}
+
+
+/* Login Link */
+
+.login-text {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+.login-text a {
+    color: #b3472c;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Form Validation */
+
+.error {
+    display: block;
+    color: #ff8f83;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.form-group input.errorBorder {
+    border: 1px solid red;
+}
+
+.form-group input.successBorder {
+    border: 1px solid green;
+}
+
+#result {
+    color: lightgreen;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* Mobile Responsiveness */
+
+@media (max-width: 600px) {
+
+    .register-container {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .welcome-section {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .welcome-section h1 {
+        font-size: 36px;
+    }
+
+    .form-section {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 30px;
+    }
+}
