@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rate & review · GiftWise</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Bitter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/review.css">
+</head>
+<body>
+<div id="app">
+<div id="nav"></div>
+<main class="enter">
+<a class="back" id="back" href="recommendations.html">← Back</a>
+<div class="auth left">
+  <h1 class="h1s">Rate &amp; <em>review</em></h1>
+  <p class="m" id="what"></p>
+  <form id="rf" class="card fm" novalidate>
+    <div id="stars" aria-label="Rating"></div>
+    <textarea id="text" rows="4" placeholder="Was it a hit? Tell us how the recipient reacted…"></textarea>
+    <div class="err" id="err"></div>
+    <div class="row"><button class="btn">Submit review</button><a class="btn ghost" id="cancel" href="#">Cancel</a></div>
+  </form>
+</div>
+</main>
+</div>
+<script src="js/common.js"></script>
+<script src="js/data.js"></script>
+<script src="js/review.js"></script>
+</body>
+</html>

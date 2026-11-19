@@ -1,0 +1,44 @@
+/* GiftWise: shared styles used by every page */
+:root{color-scheme:dark;--a:#91361F;--c:#232323;--ch:#383838;--m:#a0958f}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html,body{height:100%;margin:0;overflow:hidden;background:#000;color:#fff;font:400 16px/1.4 Bitter,Georgia,serif}
+h1,h2,.logo{font-family:"DM Serif Display",Georgia,serif;font-weight:400;margin:0}h3{margin:0;font-weight:500}p{margin:0}a{color:inherit;text-decoration:none}
+em{color:var(--a);font-style:normal}.m{color:var(--m)}
+#app{height:100vh;height:100dvh;display:flex;flex-direction:column}
+nav{display:flex;align-items:center;gap:26px;padding:clamp(10px,2vh,18px) 56px;position:relative;z-index:1}
+nav .logo{font-size:28px;margin-right:auto}nav a{color:#ddd;transition:color .2s}nav a:hover,nav a.on{color:var(--a)}
+main{flex:1;min-height:0;display:flex;flex-direction:column;gap:clamp(8px,1.5vh,14px);padding:4px 56px clamp(14px,2.4vh,26px);position:relative;z-index:1}main.bleed{padding:0;gap:0}
+.card{background:var(--c);border-radius:28px;padding:22px 28px}
+.btn{background:var(--a);color:#fff;border:0;border-radius:40px;padding:14px 32px;font:inherit;font-size:18px;cursor:pointer;display:inline-block;text-align:center}
+.btn.sm{padding:9px 22px;font-size:15px}.btn.ghost{background:var(--ch)}.btn.out{background:none;box-shadow:inset 0 0 0 2px var(--a)}.wide{width:100%}
+.chip{background:var(--ch);color:#eee;border:0;border-radius:30px;padding:7px 16px;font:inherit;font-size:14px;cursor:pointer;display:inline-block}.chip.sel{background:var(--a)}.chip:disabled{opacity:.35;cursor:default}
+.cw{display:flex;flex-wrap:wrap;gap:8px}.row{display:flex;gap:14px;align-items:center}.row>*{min-width:0}.end{justify-content:flex-end}
+input,textarea,select{width:100%;background:linear-gradient(90deg,#220f09,#561f12);border:0;border-radius:22px;padding:13px 22px;color:#fff;font:inherit;font-size:17px;margin:0;outline:none}
+input::placeholder,textarea::placeholder{color:var(--m)}input:focus,textarea:focus,select:focus{box-shadow:0 0 0 2px var(--a)}select option{background:#222}textarea{resize:none}
+.btn,.chip,.gift,.back{transition:transform .25s,filter .25s,background .25s,color .25s,outline-color .25s}
+.btn:hover{filter:brightness(1.2);transform:translateY(-1px)}.btn:active,.chip:active{transform:scale(.97)}
+a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.back{align-self:flex-start;background:none;border:0;color:var(--m);font:inherit;font-size:15px;cursor:pointer;padding:0}.back:hover{color:#fff;transform:translateX(-3px)}
+.err{color:#ff8a70;font-size:15px;min-height:21px}.lab{display:block;margin-bottom:8px;color:var(--m);font-size:14px}
+.enter{animation:up .45s cubic-bezier(.2,.7,.2,1) both}@keyframes up{from{opacity:0;transform:translateY(10px)}}@keyframes fl{50%{transform:translateY(-8px) rotate(4deg)}}
+.deco{position:fixed;font-size:40px;opacity:.55;pointer-events:none;animation:fl 8s ease-in-out infinite;z-index:0}.deco:nth-child(even){animation-duration:10s;animation-delay:-4s}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--a);padding:12px 28px;border-radius:30px;z-index:9}
+.h1s{font-size:clamp(28px,4.8vh,42px)}.hg{display:flex;flex-direction:column;gap:2px}.hd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.auth{margin:auto;width:100%;max-width:640px;text-align:center;display:flex;flex-direction:column;gap:clamp(10px,2vh,16px)}.auth.card{padding:30px 34px}.left{text-align:left}.fm{display:flex;flex-direction:column;gap:12px}
+.dl{display:grid;grid-template-columns:120px 1fr;gap:8px 14px;font-size:15px}.dl span:nth-child(odd){color:var(--m)}
+/* wizard (recipient > relationship > occasion > budget > interests) */
+.wiz{margin:auto;width:100%;max-width:760px;display:flex;flex-direction:column;gap:clamp(12px,2.4vh,22px)}.wiz .card{display:flex;flex-direction:column;gap:clamp(12px,2.2vh,18px);padding:28px 34px}
+.wiz .chip{font-size:17px;padding:11px 24px}.stepper{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
+.st{display:flex;align-items:center;gap:8px;color:var(--m);font-size:14px}.st b{width:30px;height:30px;border-radius:50%;background:var(--ch);display:flex;align-items:center;justify-content:center;color:#fff;font:700 14px Arial,sans-serif}
+.st.done b,.st.on b{background:var(--a)}.st.on{color:#fff}.st+.st:before{content:"";width:22px;height:1px;background:#444;margin-right:2px}
+/* gift cards */
+.gift{background:var(--c);border-radius:22px;padding:14px;display:flex;flex-direction:column;min-height:0;cursor:pointer;position:relative}.gift:hover{transform:translateY(-4px);outline:2px solid var(--a)}
+.pic{position:relative;border-radius:16px;overflow:hidden;background:#111;flex:1;min-height:0}.pic svg,.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tx{min-width:0;margin-top:10px}.gift h3{font-size:clamp(15px,2.2vh,19px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:1px 0}.gift .m{font-size:13px}
+.pr{display:flex;justify-content:space-between;gap:8px;align-items:baseline}.pr .m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.price{color:var(--a);font-size:17px}
+.why{color:#d9a08f;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heart{position:absolute;top:22px;right:22px;width:34px;height:34px;border-radius:50%;border:0;background:#000b;color:var(--a);font-size:18px;cursor:pointer;z-index:2;transition:transform .2s}.heart:hover{transform:scale(1.15)}
+.hz{flex-direction:row;align-items:stretch;gap:14px}.hz .pic{flex:none;width:40%}.hz .tx{margin:0;flex:1;display:flex;flex-direction:column;justify-content:center;gap:3px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(var(--r,2),minmax(0,1fr));gap:16px;flex:1;min-height:0}
+.pg{display:flex;justify-content:center;align-items:center;gap:18px;flex:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

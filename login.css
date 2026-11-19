@@ -1,0 +1,4 @@
+/* Login page */
+.auth{max-width:520px}
+.auth h1{font-size:clamp(40px,8vh,64px);color:var(--a);margin-bottom:clamp(6px,2vh,18px)}
+.deco{font-size:52px;opacity:.9}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register · GiftWise</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Bitter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div id="app">
+
+<main class="enter bleed">
+<form id="rf" class="regp" novalidate>
+  <div class="rl">
+    <a class="back" href="index.html">← Back</a>
+    <h1 class="rt">Create Your<br><em>Account</em></h1>
+    <div class="rb">
+      <label class="ck"><input type="checkbox" id="tc">I agree to the&nbsp;<em>Terms</em>&nbsp;and&nbsp;<em>Conditions</em></label>
+      <div class="err" id="err"></div>
+      <button class="btn rbtn">Register</button>
+      <p class="m">Already registered? <a href="login.html"><em>Login</em></a></p>
+    </div>
+  </div>
+  <div class="rr">
+    <label for="name">Full Name</label><input id="name" autocomplete="name">
+    <label for="username">Username</label><input id="username" autocomplete="username">
+    <label for="email">Email</label><input id="email" type="email" autocomplete="email">
+    <label for="pw">Password</label><input id="pw" type="password" autocomplete="new-password">
+    <label for="pw2">Confirm Password</label><input id="pw2" type="password" autocomplete="new-password">
+    <label>Gender</label>
+    <div class="gr">
+      <label class="ck"><input type="radio" name="g" value="Male">Male</label>
+      <label class="ck"><input type="radio" name="g" value="Female">Female</label>
+      <label class="ck"><input type="radio" name="g" value="Other">Other</label>
+    </div>
+  </div>
+</form>
+</main>
+</div>
+<script src="js/common.js"></script>
+
+<script src="js/register.js"></script>
+</body>
+</html>
